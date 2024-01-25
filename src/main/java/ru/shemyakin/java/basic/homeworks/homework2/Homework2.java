@@ -8,7 +8,7 @@ public class Homework2 {
         //задание номер 1
         int[] arr1={1,2,3,4};
         int[] arr2={5,6,7,8};
-        int[] arr3={9,10,11,6};
+        int[] arr3={9,10,11,12};
         System.out.println("Первый массив " + Arrays.toString(arr1));
         System.out.println("Второй массив " + Arrays.toString(arr2));
         System.out.println("Третий массив " + Arrays.toString(arr3));
@@ -21,6 +21,17 @@ public class Homework2 {
         } else {
             System.out.println("Точки равенства нет");
         }
+
+        //задание номер 3
+        if (isArrayInc(arrSum)) {
+            System.out.println("Все элементы массива идут по возрастанию");
+        } else {
+            System.out.println("Не все элементы массива идут по возрастанию");
+        }
+
+        //задание номер 4
+        System.out.println(Arrays.toString(flipArray(arrSum)));
+
     }
 
 
@@ -60,5 +71,26 @@ public class Homework2 {
         }
         return sumLeft == sumRight;
     }
+
+    private static boolean isArrayInc(int... arrOfInt) {
+        int i = 0;
+        while (i < arrOfInt.length - 1) {
+            if (arrOfInt[i] > arrOfInt[i + 1]) return false;
+            i++;
+        }
+        return true;
+    }
+
+    private static int[] flipArray(int... arrOfInt) {
+        int lengthOfArray = arrOfInt.length;
+        int[] arrResult = new int[lengthOfArray];
+        for (int i = 0; i < lengthOfArray / 2; i++) {
+            arrResult[i] = arrOfInt[lengthOfArray - i -1];
+            arrResult[lengthOfArray - i - 1] = arrOfInt[i];
+        }
+        return arrResult;
+    }
+
+
 
 }
