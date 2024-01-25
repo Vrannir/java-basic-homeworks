@@ -9,13 +9,18 @@ public class Homework2 {
         int[] arr1={1,2,3,4};
         int[] arr2={5,6,7,8};
         int[] arr3={9,10,11,12};
+
         System.out.println("Первый массив " + Arrays.toString(arr1));
         System.out.println("Второй массив " + Arrays.toString(arr2));
         System.out.println("Третий массив " + Arrays.toString(arr3));
+
+        //задание номер 1
+        System.out.println("Задание 1");
         int[] arrSum = sumArrays(arr1, arr2, arr3);
         System.out.println("Итоговый массив " + Arrays.toString(arrSum));
 
         //задание номер 2
+        System.out.println("Задание 2");
         if (isArrayWithMedPoint(arrSum)) {
             System.out.println("Точка равенства есть");
         } else {
@@ -23,6 +28,7 @@ public class Homework2 {
         }
 
         //задание номер 3
+        System.out.println("Задание 3");
         if (isArrayInc(arrSum)) {
             System.out.println("Все элементы массива идут по возрастанию");
         } else {
@@ -30,6 +36,7 @@ public class Homework2 {
         }
 
         //задание номер 4
+        System.out.println("Задание 4");
         System.out.println(Arrays.toString(flipArray(arrSum)));
 
     }
@@ -90,7 +97,4 @@ public class Homework2 {
         }
         return arrResult;
     }
-
-
-
 }
