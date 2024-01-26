@@ -5,9 +5,9 @@ import java.util.Arrays;
 public class Homework2 {
 
     public static void main(String[] args) {
-        int[] arr1 = {1, 2, 3, 4};
-        int[] arr2 = {5, 6, 7, 8};
-        int[] arr3 = {9, 10, 11, 12};
+        int[] arr1 = {1, 2, 3};
+        int[] arr2 = {4, 5};
+        int[] arr3 = {10, 11, 18, 23};
 
         System.out.println("Первый массив " + Arrays.toString(arr1));
         System.out.println("Второй массив " + Arrays.toString(arr2));
@@ -30,7 +30,7 @@ public class Homework2 {
         } else {
             System.out.println("Не все элементы массива идут по возрастанию");
         }
-
+        System.out.println(5 / 2);
         System.out.println("Задание 4");
         System.out.println(Arrays.toString(flipArray(arrSum)));
 
@@ -82,7 +82,7 @@ public class Homework2 {
     private static int[] flipArray(int... arrOfInt) {
         int lengthOfArray = arrOfInt.length;
         int[] arrResult = new int[lengthOfArray];
-        for (int i = 0; i < lengthOfArray / 2; i++) {
+        for (int i = 0; i <= lengthOfArray / 2; i++) {
             arrResult[i] = arrOfInt[lengthOfArray - i - 1];
             arrResult[lengthOfArray - i - 1] = arrOfInt[i];
         }
