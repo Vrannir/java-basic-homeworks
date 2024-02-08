@@ -3,7 +3,7 @@ package ru.shemyakin.java.basic.homeworks.homework4;
 public class Homework4 {
     public static void main(String[] args) {
 
-        User[] Users = {
+        User[] users = {
                 new User("Сидор", "Сидорович", "Сидоров", 1982, "sidor23423@mail.ru"),
                 new User("Иван", "Иванович", "Иванов", 1975, "ivanov1975@mail.ru"),
                 new User("Игорь", "Сергеевич", "Петров", 1985, "petrov85@mail.ru"),
@@ -17,11 +17,11 @@ public class Homework4 {
         };
 
         int counter = 0;
-        for (int i = 0; i < Users.length; i++) {
-            if ((2024 - Users[i].getYearOfBirth()) > 40) {
+        for (int i = 0; i < users.length; i++) {
+            if ((2024 - users[i].getYearOfBirth()) > 40) {
                 counter++;
                 System.out.println(counter + " =======================");
-                Users[i].printUserInfo();
+                users[i].printUserInfo();
             }
         }
 

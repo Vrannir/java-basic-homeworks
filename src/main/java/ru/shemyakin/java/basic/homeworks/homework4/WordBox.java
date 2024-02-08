@@ -43,13 +43,15 @@ public class WordBox {
 
     public void clearBox() {
         if (isOpened) {
-            System.out.println("Выбрасываем \"" + item + "\" из коробки");
-            item = "";
+            System.out.println("Выбрасываем \"" + this.item + "\" из коробки");
+            this.item = "";
         }
     }
 
     public void putItem(String item) {
-        if (isOpened) this.item = item;
-        System.out.println("помещаем \"" + item + "\" в коробку");
+        if (isOpened) {
+            this.item = item;
+            System.out.println("помещаем \"" + item + "\" в коробку");
+        }
     }
 }
