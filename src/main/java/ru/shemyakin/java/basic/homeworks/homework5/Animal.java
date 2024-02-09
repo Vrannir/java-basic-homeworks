@@ -1,14 +1,15 @@
 package ru.shemyakin.java.basic.homeworks.homework5;
 
-public abstract class Animal{
+public abstract class Animal {
     protected String name;
     protected int runSpeed;
     protected int swimSpeed;
     protected int stamina;
 
-    public Animal(String name, int runSpeed,  int stamina) {
+    public Animal(String name, int runSpeed, int swimSpeed, int stamina) {
         this.name = name;
         this.runSpeed = runSpeed;
+        this.swimSpeed = swimSpeed;
         this.stamina = stamina;
     }
 
