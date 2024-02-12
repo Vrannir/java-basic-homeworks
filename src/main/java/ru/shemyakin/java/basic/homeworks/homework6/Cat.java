@@ -11,6 +11,14 @@ public class Cat {
         this.satiety = false;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public boolean isSatiety() {
+        return satiety;
+    }
+
     public void eat(Plate plate) {
         if (!this.satiety && plate.decreaseFood(this.appetite)) {
             this.satiety = true;
