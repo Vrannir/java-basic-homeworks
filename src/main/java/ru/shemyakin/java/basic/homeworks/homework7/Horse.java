@@ -1,6 +1,6 @@
 package ru.shemyakin.java.basic.homeworks.homework7;
 
-public class Horse implements Transport{
+public class Horse implements Transport {
     private int stamina;
 
     public Horse(int stamina) {
@@ -9,10 +9,15 @@ public class Horse implements Transport{
 
     @Override
     public boolean move(int distance, Terrain terrain) {
-        if (this.stamina * 4 > distance && terrain != Terrain.MARSH) {
+        if (this.stamina * 4 >= distance && terrain != Terrain.MARSH) {
             this.stamina -= distance / 4;
             return true;
         }
         return false;
+    }
+
+    @Override
+    public String getName() {
+        return "лошадь";
     }
 }

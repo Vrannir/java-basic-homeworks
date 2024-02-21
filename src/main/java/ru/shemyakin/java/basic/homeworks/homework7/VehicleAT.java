@@ -9,10 +9,15 @@ public class VehicleAT implements Transport {
 
     @Override
     public boolean move(int distance, Terrain terrain) {
-        if (this.fuel * 5 > distance) {
+        if (this.fuel * 5 >= distance) {
             this.fuel -= distance / 5;
             return true;
         }
         return false;
+    }
+
+    @Override
+    public String getName() {
+        return "вездеход";
     }
 }

@@ -23,17 +23,24 @@ public class Human implements Transport {
         return false;
     }
 
+    @Override
+    public String getName() {
+        return null;
+    }
+
     public boolean getInTransport(Transport transport) {
-        if (this.curentTransport==this) {
+        if (this.curentTransport == this) {
             this.curentTransport = transport;
+            System.out.println(this.name + " сел в/на " + transport.getName());
             return true;
         }
         return false;
     }
 
     public boolean getOutTransport() {
-        if (this.curentTransport!=this) {
+        if (this.curentTransport != this) {
             this.curentTransport = this;
+            System.out.println(this.name + " не использует больше транспорт");
             return true;
         }
         return false;
