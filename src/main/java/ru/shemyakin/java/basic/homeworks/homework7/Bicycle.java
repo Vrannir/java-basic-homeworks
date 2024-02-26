@@ -1,6 +1,7 @@
 package ru.shemyakin.java.basic.homeworks.homework7;
 
 public class Bicycle implements Transport {
+    static final String Name = "велосипед";
 
     public Bicycle() {
     }
@@ -12,6 +13,6 @@ public class Bicycle implements Transport {
 
     @Override
     public String getName() {
-        return "велосипед";
+        return Name;
     }
 }

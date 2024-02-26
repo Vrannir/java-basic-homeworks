@@ -1,17 +1,16 @@
 package ru.shemyakin.java.basic.homeworks.homework7;
 
-public class Human implements Transport {
+public class Human {
     private String name;
     private Transport curentTransport;
 
     public Human(String name) {
         this.name = name;
-        this.curentTransport = this;
+        this.curentTransport = null;
     }
 
-    @Override
     public boolean move(int distance, Terrain terrain) {
-        if (this.curentTransport == this) {
+        if (this.curentTransport == null) {
             System.out.println(this.name + " прошел пешком через " + terrain.getName());
             return true;
         }
@@ -23,13 +22,8 @@ public class Human implements Transport {
         return false;
     }
 
-    @Override
-    public String getName() {
-        return null;
-    }
-
     public boolean getInTransport(Transport transport) {
-        if (this.curentTransport == this) {
+        if (this.curentTransport == null) {
             this.curentTransport = transport;
             System.out.println(this.name + " сел в/на " + transport.getName());
             return true;
@@ -38,8 +32,8 @@ public class Human implements Transport {
     }
 
     public boolean getOutTransport() {
-        if (this.curentTransport != this) {
-            this.curentTransport = this;
+        if (this.curentTransport != null) {
+            this.curentTransport = null;
             System.out.println(this.name + " не использует больше транспорт");
             return true;
         }

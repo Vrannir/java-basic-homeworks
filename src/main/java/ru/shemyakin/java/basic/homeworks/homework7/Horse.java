@@ -3,14 +3,18 @@ package ru.shemyakin.java.basic.homeworks.homework7;
 public class Horse implements Transport {
     private int stamina;
 
+    static final int Power = 4;
+    static final String Name = "лошадь";
+
+
     public Horse(int stamina) {
         this.stamina = stamina;
     }
 
     @Override
     public boolean move(int distance, Terrain terrain) {
-        if (this.stamina * 4 >= distance && terrain != Terrain.MARSH) {
-            this.stamina -= distance / 4;
+        if (this.stamina * Power >= distance && terrain != Terrain.MARSH) {
+            this.stamina -= distance / Power;
             return true;
         }
         return false;
@@ -18,6 +22,6 @@ public class Horse implements Transport {
 
     @Override
     public String getName() {
-        return "лошадь";
+        return Name;
     }
 }

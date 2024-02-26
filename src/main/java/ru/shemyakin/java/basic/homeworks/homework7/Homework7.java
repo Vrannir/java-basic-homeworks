@@ -13,6 +13,6 @@ public class Homework7 {
         man.move(24, Terrain.MARSH);
         man.getOutTransport();
         man.getInTransport(horse);
-        man.move(16, Terrain.FOREST);
+        man.move(35, Terrain.FOREST);
     }
 }
