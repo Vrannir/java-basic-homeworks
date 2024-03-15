@@ -1,6 +1,8 @@
 package ru.shemyakin.java.basic.homeworks.homework10;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 public class PhoneBook {
@@ -22,11 +24,13 @@ public class PhoneBook {
         return this.list.size();
     }
 
-    public boolean containsPhoneNumber(int number){
+    public boolean containsPhoneNumber(int number) {
         return this.list.containsKey(number);
     }
 
-    public void find(String name){
-        for(Contact elem: this.list.values()) if (elem.getName().equals(name)) System.out.println(elem);
+    public ArrayList<Integer> find(String name) {
+        ArrayList<Integer> result = new ArrayList<>();
+        for (Contact elem : this.list.values()) if (elem.getName().equals(name)) result.add(elem.getNumber());
+        return result;
     }
 }
