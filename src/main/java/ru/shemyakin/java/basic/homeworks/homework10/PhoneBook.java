@@ -2,7 +2,7 @@ package ru.shemyakin.java.basic.homeworks.homework10;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 
 public class PhoneBook {
@@ -28,8 +28,8 @@ public class PhoneBook {
         return this.list.containsKey(number);
     }
 
-    public ArrayList<Integer> find(String name) {
-        ArrayList<Integer> result = new ArrayList<>();
+    public List<Integer> find(String name) {
+        List<Integer> result = new ArrayList<>();
         for (Contact elem : this.list.values()) if (elem.getName().equals(name)) result.add(elem.getNumber());
         return result;
     }

@@ -1,7 +1,6 @@
 package ru.shemyakin.java.basic.homeworks.homework10;
 
-import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.List;
 
 public class Homework10 {
     public static void main(String[] args) {
@@ -14,7 +13,7 @@ public class Homework10 {
         book.print();
         System.out.println(book.size());
         System.out.println(book.containsPhoneNumber(1090909));
-        ArrayList<Integer> searchList = book.find("Fedor");
+        List<Integer> searchList = book.find("Fedor");
         System.out.println(searchList);
     }
 }
